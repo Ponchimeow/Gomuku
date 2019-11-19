@@ -22,3 +22,5 @@ render() {
 `<Canvas />`，與棋盤大小相同，設置`onClick event`監測，點擊後計算點擊位置相對應棋盤的座標
 
 座標紀錄於`chessLogs`中以陣列儲存，`render()`時判斷獲勝者
+
+![](Gomuku.png)
