@@ -34,6 +34,8 @@ canvas {
 
 .history {
   height: 560px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .history__btn {
