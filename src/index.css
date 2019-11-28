@@ -35,14 +35,21 @@ canvas {
 .history {
   height: 560px;
   overflow: hidden;
+  position: relative;
+}
+
+.history-list {
+  position: absolute;
+  top: 20px;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
-.history__btn {
+.history-btn {
   cursor: pointer;
 }
 
-.history__btn:hover {
+.history-btn:hover {
   color: #006284;
 }
 

@@ -253,10 +253,12 @@ class Chess extends Component {
               }
             </div>
             <div className='history'>
-              <div className='history__btn restart' onClick={() => this.handleMove(0)} >#0 Start</div>
-              {chessLogs.map((log, index) => (
-                <div className='history__btn' key={index + 1} onClick={() => this.handleMove(index + 1)}>#{index + 1}  {log.x}, {en[log.y - 1]}</div>
-              ))}
+              <div className='history-btn restart' onClick={() => this.handleMove(0)} >#0 Start</div>
+              <div classNmae='history-list'>
+                {chessLogs.map((log, index) => (
+                  <div className='history-btn history-list__btn' key={index + 1} onClick={() => this.handleMove(index + 1)}>#{index + 1}  {log.x}, {en[log.y - 1]}</div>
+                ))}
+              </div>
             </div>
           </div>
           <div className='tip'>點選退回步數</div>
