@@ -246,19 +246,17 @@ class Chess extends Component {
           onClick={this.checkChess}
         />
         <div className='control'>
-          <div className='button__group'>
-            <div className='button__group info'>
+          <div className='button-group'>
+            <div className='button-group__info'>
               {winner !== '' ?
                 `Winner: ${winner}` : (`Next: ${(chessLogs.length % 2 === 0) ? 'Black' : 'White'}`)
               }
             </div>
             <div className='history'>
               <div className='history-btn restart' onClick={() => this.handleMove(0)} >#0 Start</div>
-              <div classNmae='history-list'>
-                {chessLogs.map((log, index) => (
-                  <div className='history-btn history-list__btn' key={index + 1} onClick={() => this.handleMove(index + 1)}>#{index + 1}  {log.x}, {en[log.y - 1]}</div>
-                ))}
-              </div>
+              {chessLogs.map((log, index) => (
+                <div className='history-btn' key={index + 1} onClick={() => this.handleMove(index + 1)}>#{index + 1}  {log.x}, {en[log.y - 1]}</div>
+              ))}
             </div>
           </div>
           <div className='tip'>點選退回步數</div>
